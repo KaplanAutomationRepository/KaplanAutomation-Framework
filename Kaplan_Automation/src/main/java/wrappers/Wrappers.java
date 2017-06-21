@@ -12,7 +12,7 @@ public interface Wrappers {
 	 * 
 	 */
 	
-	public void clickByXpath();
+	
 	
 	
 	
