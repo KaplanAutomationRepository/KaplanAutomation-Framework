@@ -1,17 +1,18 @@
 package utils;
 
+import java.io.File;
+
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 public abstract class Reporter {
-
 	public ExtentTest test;
 	public static ExtentReports extent;
 	public String testCaseName, testDescription, category, authors;
-	
-	public void reportstep(String description,String status,boolean bSnap)
-	{
+
+	public void reportStep(String desc, String status, boolean bSnap) {
+
 		if(bSnap && !status.equalsIgnoreCase("INFO")){
 			long snapNumber = 100000l;
 			
@@ -20,54 +21,52 @@ public abstract class Reporter {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			description = description+test.
+			desc = desc+test.
 					addScreenCapture("./../reports/images/"+snapNumber+".jpg");
+			//"./../reports/images/"+snapNumber+
 		}
-		//write if it is successful or failure or information	
-		if(status.equalsIgnoreCase("PASS"))
-		{
-			test.log(LogStatus.PASS, description);
+		
+		// Write if it is successful or failure or information
+		if(status.equalsIgnoreCase("PASS")){
+			test.log(LogStatus.PASS, desc);
+		}else if(status.equalsIgnoreCase("FAIL")){
+			test.log(LogStatus.FAIL, desc);
+			throw new RuntimeException("FAILED");
+		}else if(status.equalsIgnoreCase("WARN")){
+			test.log(LogStatus.WARNING, desc);
+		}else if(status.equalsIgnoreCase("INFO")){
+			test.log(LogStatus.INFO, desc);
 		}
-		else if(status.equalsIgnoreCase("FAIL"))
-		{
-			test.log(LogStatus.FAIL, description);
-			throw new RuntimeException("Failed");
-		}
-		else if(status.equalsIgnoreCase("WARN"))
-		{
-			test.log(LogStatus.WARNING,description);
-		}
-		else if(status.equalsIgnoreCase("INFO"))
-				{
-					test.log(LogStatus.INFO, description);
-				}
+	
 	}
-	public abstract long takeSnap();
 	
 	public void reportStep(String desc, String status) {
-		reportstep(desc, status, true);
+		reportStep(desc, status, true);
 	}
 
-		public ExtentReports startResult()
-		{
-			extent = new ExtentReports("./reports/report.html", false);
-//			extent.loadConfig(new File("./src/main/resources/extent-config.xml"));
-			return extent;
-		}
-		public ExtentTest startTestCase(String testCaseName,String testDescription)
-		{
-			test = extent.startTest(testCaseName, testDescription);
-			return test;
-			
-		}
-		public void endResult()
-		{
-			extent.flush();
-		}
-		public void endTestCase()
-		{
-			extent.endTest(test);
-		}
+	public abstract long takeSnap();
+	
 
+	public ExtentReports startResult(){
+		//change to false we can see all the previous reports
+		extent = new ExtentReports("./reports/report.html", true);
+		extent.loadConfig(new File("./src/main/resources/extent-configuration.xml"));
+		return extent;
+	}
+
+	public ExtentTest startTestCase(String testCaseName, String testDescription){
+		test = extent.startTest(testCaseName, testDescription);
+		return test;
+	}
+
+	public void endResult(){		
+		extent.flush();
+	}
+
+	public void endTestcase(){
+		extent.endTest(test);
+	}
+
+	
 	
 }

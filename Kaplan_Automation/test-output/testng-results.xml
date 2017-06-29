@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="58137" started-at="2017-06-28T10:24:28Z" finished-at="2017-06-28T10:25:26Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="58137" started-at="2017-06-28T10:24:28Z" finished-at="2017-06-28T10:25:26Z">
+      <class name="studentcenter_testCases.TC_001_LoginandLogout">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:studentcenter_testCases.TC_001_LoginandLogout@3c0f93f1]" name="beforeSuite" is-config="true" duration-ms="478" started-at="2017-06-28T11:24:28Z" finished-at="2017-06-28T11:24:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:studentcenter_testCases.TC_001_LoginandLogout@3c0f93f1]" name="beforeTest" is-config="true" duration-ms="1" started-at="2017-06-28T11:24:28Z" finished-at="2017-06-28T11:24:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="setData()[pri:0, instance:studentcenter_testCases.TC_001_LoginandLogout@3c0f93f1]" name="setData" is-config="true" duration-ms="0" started-at="2017-06-28T11:24:28Z" finished-at="2017-06-28T11:24:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setData -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:studentcenter_testCases.TC_001_LoginandLogout@3c0f93f1]" name="beforeMethod" is-config="true" duration-ms="7383" started-at="2017-06-28T11:24:29Z" finished-at="2017-06-28T11:24:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="loginAndLogout(java.lang.String, java.lang.String)[pri:0, instance:studentcenter_testCases.TC_001_LoginandLogout@3c0f93f1]" name="loginAndLogout" duration-ms="32318" started-at="2017-06-28T11:24:36Z" data-provider="fetchData" finished-at="2017-06-28T11:25:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[newtest1@mail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Password1234]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAndLogout -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:studentcenter_testCases.TC_001_LoginandLogout@3c0f93f1]" name="afterMethod" is-config="true" duration-ms="1578" started-at="2017-06-28T11:25:09Z" finished-at="2017-06-28T11:25:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:studentcenter_testCases.TC_001_LoginandLogout@3c0f93f1]" name="beforeMethod" is-config="true" duration-ms="5585" started-at="2017-06-28T11:25:10Z" finished-at="2017-06-28T11:25:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="loginAndLogout(java.lang.String, java.lang.String)[pri:0, instance:studentcenter_testCases.TC_001_LoginandLogout@3c0f93f1]" name="loginAndLogout" duration-ms="9068" started-at="2017-06-28T11:25:16Z" data-provider="fetchData" finished-at="2017-06-28T11:25:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[kaplantest15@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Password1234]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAndLogout -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:studentcenter_testCases.TC_001_LoginandLogout@3c0f93f1]" name="afterMethod" is-config="true" duration-ms="1174" started-at="2017-06-28T11:25:25Z" finished-at="2017-06-28T11:25:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:studentcenter_testCases.TC_001_LoginandLogout@3c0f93f1]" name="afterTest" is-config="true" duration-ms="0" started-at="2017-06-28T11:25:26Z" finished-at="2017-06-28T11:25:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:studentcenter_testCases.TC_001_LoginandLogout@3c0f93f1]" name="afterSuite" is-config="true" duration-ms="530" started-at="2017-06-28T11:25:26Z" finished-at="2017-06-28T11:25:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- studentcenter_testCases.TC_001_LoginandLogout -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
