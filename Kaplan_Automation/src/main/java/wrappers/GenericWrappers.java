@@ -32,7 +32,7 @@ public class GenericWrappers extends Reporter implements Wrappers {
 	protected static Properties pro;
 	public String sUrl,primaryWindowHandle,sHubUrl,sHubPort;
 	protected String objecFile = "object.properties";
-	private String propertyLocation = "properties/";
+	private String propertyLocation = "resources/";
 	protected static Properties objec = null;
 	
 	
@@ -88,17 +88,14 @@ public class GenericWrappers extends Reporter implements Wrappers {
 	   public void loadObjects()
 	   {
 	    objec = new Properties();
-	FileInputStream ip = null;
-	       try {
-	        ip = new FileInputStream(propertyLocation + objecFile);
-	        try {
-				objec.load(ip);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-	       } catch (FileNotFoundException e) {
-	           e.printStackTrace();
-	       }
+        try {
+			//objec.load(ip);
+        	ClassLoader classLoader = getClass().getClassLoader();
+			objec.load(new FileInputStream(new File(classLoader.getResource("object.properties").getFile())));
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	   }
 
 	public void unloadObjects()
@@ -128,7 +125,6 @@ public class GenericWrappers extends Reporter implements Wrappers {
 		long number = (long) Math.floor(Math.random() * 900000000L) + 10000000L; 
 		try {
 			FileUtils.copyFile(driver.getScreenshotAs(OutputType.FILE) , new File("./reports/images/"+number+".jpg"));
-			//FileUtils.copyFile(driver.getScreenshotAs(OutputType.FILE) , new File("./../reports/images/"+number+".jpg"));
 		} catch (WebDriverException e) {
 			reportStep("The browser has been closed.", "FAIL");
 		} catch (IOException e) {
@@ -149,7 +145,7 @@ public class GenericWrappers extends Reporter implements Wrappers {
 	public void invokeApp(String browser, boolean bRemote) {
 		
 		try {
-			DesiredCapabilities dc= new DesiredCapabilities();
+             DesiredCapabilities dc= new DesiredCapabilities();
 			dc.setBrowserName(browser);
 			dc.setPlatform(Platform.WINDOWS);
 			
@@ -334,6 +330,5 @@ public void closeBrowser() {
 		}
 				return titlestatus;	
 	}
-	
 }	
 

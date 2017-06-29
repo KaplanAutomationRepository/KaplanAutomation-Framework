@@ -22,21 +22,6 @@ public class Login_Page extends KaplanSpecificWrappers
 	{
 		enterDataById(objec.getProperty("Login.EmailAddress.Id"),userName);
 		return this;
-		//enterDataById(object.getProperty("Login.EmailAddress.Id"),userName);
-		//return this;		
-	
-	/*public Login_Page enterUserName(String userName)
-	   {
-	String UserID= pro.getProperty("Login.EmailAddress.Id");
-	       enterDataById(UserID,userName);
-	       return this;        
-	   }*/
-	/*public Login_Page enterUserName(String userName)
-	   {
-	String UserID= pro.getProperty("Login.EmailAddress.Id");
-	       enterDataById(UserID,userName);
-	       return this;        
-	   }*/
 	}
 	//Enter Password in the field
 	public Login_Page enterPassword(String password)
@@ -47,10 +32,14 @@ public class Login_Page extends KaplanSpecificWrappers
 	//Click on Login button
 	public MyDetails_Page clickLogin()
 	{
-	   //clickByXpath(objec.getProperty("Login.Loginbutton.Xpath"));
-	   clickByXpath("//button[@type='submit']");
-	   
+	   clickByXpath(objec.getProperty("Login.Loginbutton.Xpath"));
+	   //clickByXpath("//button[@type='submit']");
 		 //clickByXPath("//button[@value='Login']");
 		return new MyDetails_Page(driver,test);	
+	}
+	public Homepage_CIMABooks_BS_Page clickBSLogin()
+	{
+		 clickByXpath(objec.getProperty("Login.Loginbutton.Xpath"));
+		 return new Homepage_CIMABooks_BS_Page(driver,test);
 	}
 }

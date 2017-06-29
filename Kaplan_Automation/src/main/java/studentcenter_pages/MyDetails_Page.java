@@ -12,11 +12,11 @@ public class MyDetails_Page extends KaplanSpecificWrappers{
 	{
 		this.driver=driver;
 		this.test=test;
-		if(!verifyTitleContains("New MyKaplan"))
+		if(!verifyTitleContains("New MyKaplan")||verifyTitleContains("Account home"))
 		{
 			reportStep("This is not New MyKaplan Page", "FAIL");
 		}
-	}
+		}
 	public Login_Page clickSignOut()
 	{
 		clickBylinkText(objec.getProperty("MyDetails.Signout.Link"));
