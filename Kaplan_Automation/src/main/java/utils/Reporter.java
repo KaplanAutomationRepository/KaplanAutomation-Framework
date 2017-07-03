@@ -11,7 +11,7 @@ public abstract class Reporter {
 	public static ExtentReports extent;
 	public String testCaseName, testDescription, category, authors;
 
-	public void reportStep(String desc, String status, boolean bSnap) {
+	public void reportStep(String desc, String status, boolean bSnap, boolean bLog) {
 
 		if(bSnap && !status.equalsIgnoreCase("INFO")){
 			long snapNumber = 100000l;
@@ -27,21 +27,21 @@ public abstract class Reporter {
 		}
 		
 		// Write if it is successful or failure or information
-		if(status.equalsIgnoreCase("PASS")){
+		if(status.equalsIgnoreCase("PASS") && bLog){
 			test.log(LogStatus.PASS, desc);
-		}else if(status.equalsIgnoreCase("FAIL")){
+		}else if(status.equalsIgnoreCase("FAIL") && bLog){
 			test.log(LogStatus.FAIL, desc);
-			throw new RuntimeException("FAILED");
-		}else if(status.equalsIgnoreCase("WARN")){
+			//throw new RuntimeException("FAILED");
+		}else if(status.equalsIgnoreCase("WARN") && bLog){
 			test.log(LogStatus.WARNING, desc);
-		}else if(status.equalsIgnoreCase("INFO")){
+		}else if(status.equalsIgnoreCase("INFO") && bLog){
 			test.log(LogStatus.INFO, desc);
 		}
 	
 	}
 	
 	public void reportStep(String desc, String status) {
-		reportStep(desc, status, true);
+		reportStep(desc, status, true, true);
 	}
 
 	public abstract long takeSnap();

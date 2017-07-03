@@ -214,11 +214,11 @@ public void closeBrowser() {
 			try {
 				driver.findElement(By.id(idValue)).clear();
 				driver.findElement(By.id(idValue)).sendKeys(text);
-				reportStep("The data "+text+"is entered in "+idValue, "PASS");
+				reportStep("The data "+text+" is entered in "+idValue, "PASS");
 			} 
 			catch(NoSuchElementException e)
 			{
-				reportStep("The data "+text+"could not be entered in "+idValue, "FAIL");
+				reportStep("The data "+text+" could not be entered in "+idValue, "FAIL");
 			}
 			catch (Exception e)
 			{
@@ -316,19 +316,86 @@ public void closeBrowser() {
 	 */
 	public boolean verifyTitleContains(String title)
 	{
+		return verifyTitleContains(title, true, true);
+	}
+	public boolean verifyTitleContains(String title, Boolean bSnap, Boolean bLog)
+	{
 		boolean titlestatus=false;
 		try {
 			if(driver.getTitle().contains(title))
-				{reportStep("The title of the page is matching with the value "+title, "PASS");
+				{reportStep("The title of the page is matching with the value "+title, "PASS", bSnap, bLog);
 			titlestatus=true;
 				}
 			else{
-			reportStep("The title of the page is not matching", "FAIL");
+			reportStep("The title of the page is not matching", "FAIL", bSnap, bLog);
+			titlestatus=false;
 			}
 		} catch (Exception e) {
 			reportStep("Unknown exception occured while verifying the title", "FAIL");
 		}
 				return titlestatus;	
+	}
+	/**
+	 * This method will verify the text of web element using locator class 
+	 * @param title - The expected text of the element
+	 * @author Divya Suravarjula - Kaplan
+	 */
+	@SuppressWarnings("deprecation")
+	public void verifyTextByClass(String classValue,String text)
+	{
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, 100);
+			String eText=driver.findElement(By.className(classValue)).getText();
+			WebElement wb=driver.findElement(By.className(classValue));
+			System.out.println(wb);
+			System.out.println("test value"+eText);
+			wait.until(ExpectedConditions.textToBe(By.className(classValue), text));
+			//WebDriverWait wait = new WebDriverWait(driver, 10); 
+			//WebElement element = wait.until(ExpectedConditions.textToBePresentInElement(By.className(classValue), text)));
+			//String eText=element.getText();
+			//System.out.println(eText);
+			
+			if(eText.contains(text))
+			{
+				reportStep("The text "+eText+" matches with given text value "+text,"PASS");
+			}
+			else
+			{
+				reportStep("The text "+eText+" is not matching with given value "+text, "FAIL");
+			}
+		} catch (Exception e) {
+			
+			System.out.println("this is excep"+e.getMessage());
+			reportStep("Unknown exception occured while verifying the text", "FAIL");
+		}
+	}
+	public void verifyTextByXPath(String xPathValue,String text)
+	{
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, 5);
+			String eText=driver.findElement(By.xpath(xPathValue)).getText();
+			//WebElement wb=driver.findElement(By.className(xPathValue));
+			//System.out.println(wb);
+			System.out.println("test value"+eText);
+		//	wait.until(ExpectedConditions.textToBe(By.className(xPathValue), text));
+			//WebDriverWait wait = new WebDriverWait(driver, 10); 
+			//WebElement element = wait.until(ExpectedConditions.textToBePresentInElement(By.className(classValue), text)));
+			//String eText=element.getText();
+			//System.out.println(eText);
+			
+			if(eText.contains(text))
+			{
+				reportStep("The text "+eText+"matches with given text value "+text,"PASS");
+			}
+			else
+			{
+				reportStep("The text "+eText+"is not matching with given value "+text, "FAIL");
+			}
+		} catch (Exception e) {
+			
+			System.out.println("this is excep"+e.getMessage());
+			reportStep("Unknown exception occured while verifying the text", "FAIL");
+		}
 	}
 }	
 

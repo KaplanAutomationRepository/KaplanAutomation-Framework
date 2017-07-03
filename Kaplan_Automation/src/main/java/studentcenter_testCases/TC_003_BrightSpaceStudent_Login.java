@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import studentcenter_pages.Login_Page;
 import wrappers.KaplanSpecificWrappers;
 
-public class TC_002_BrightSpaceStudent_Login extends KaplanSpecificWrappers {
+public class TC_003_BrightSpaceStudent_Login extends KaplanSpecificWrappers {
 	@BeforeClass
 	public void setData() {
 		testCaseName="TC_002_BrightSpaceStudent_Login";

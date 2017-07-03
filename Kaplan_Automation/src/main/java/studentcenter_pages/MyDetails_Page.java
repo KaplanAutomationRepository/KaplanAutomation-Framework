@@ -12,7 +12,8 @@ public class MyDetails_Page extends KaplanSpecificWrappers{
 	{
 		this.driver=driver;
 		this.test=test;
-		if(!verifyTitleContains("New MyKaplan")||verifyTitleContains("Account home"))
+		Boolean bLog = false, bSnap=false;
+		if(!(verifyTitleContains("New MyKaplan", bSnap, bLog) || verifyTitleContains("Account home", bSnap, bLog)))
 		{
 			reportStep("This is not New MyKaplan Page", "FAIL");
 		}

@@ -1,6 +1,10 @@
 package studentcenter_pages;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.ExtentTest;
@@ -41,5 +45,22 @@ public class Login_Page extends KaplanSpecificWrappers
 	{
 		 clickByXpath(objec.getProperty("Login.Loginbutton.Xpath"));
 		 return new Homepage_CIMABooks_BS_Page(driver,test);
+	}
+	public Login_Page clickLoginInvalidUser()
+	{
+		 clickByXpath(objec.getProperty("Login.Loginbutton.Xpath"));
+		 return this;
+	}
+
+	public Login_Page invalidUserLogin(String errortext)
+	{
+		//WebDriverWait wait = new WebDriverWait(driver, 10); 
+		//WebElement element = wait.until(ExpectedConditions.elementT(objec.getProperty("Login.ErrorMessage.Class"))));
+		//element.click();
+		//String eText=driver.findElement(By.className("text-danger")).getText();
+		//System.out.println(eText);
+		verifyTextByXPath(objec.getProperty("Login.ErrorMessage.Xpath"), errortext);
+		
+		return this;
 	}
 }
