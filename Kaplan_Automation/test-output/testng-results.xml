@@ -1,102 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="109949" started-at="2017-06-30T06:39:30Z" finished-at="2017-06-30T06:41:19Z">
+  <suite name="Default suite" duration-ms="23360" started-at="2017-07-04T13:37:53Z" finished-at="2017-07-04T13:38:17Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="109949" started-at="2017-06-30T06:39:30Z" finished-at="2017-06-30T06:41:19Z">
-      <class name="studentcenter_testCases.TC_003_BrightSpaceStudent_Login">
-        <test-method status="PASS" signature="setData()[pri:0, instance:studentcenter_testCases.TC_003_BrightSpaceStudent_Login@31610302]" name="setData" is-config="true" duration-ms="0" started-at="2017-06-30T07:39:59Z" finished-at="2017-06-30T07:39:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setData -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:studentcenter_testCases.TC_003_BrightSpaceStudent_Login@31610302]" name="beforeMethod" is-config="true" duration-ms="6502" started-at="2017-06-30T07:39:59Z" finished-at="2017-06-30T07:40:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="loginAndLogoutOfBrightSpace(java.lang.String, java.lang.String)[pri:0, instance:studentcenter_testCases.TC_003_BrightSpaceStudent_Login@31610302]" name="loginAndLogoutOfBrightSpace" duration-ms="37127" started-at="2017-06-30T07:40:06Z" data-provider="fetchData" finished-at="2017-06-30T07:40:43Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[cdtest106@mail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Password1234]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginAndLogoutOfBrightSpace -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:studentcenter_testCases.TC_003_BrightSpaceStudent_Login@31610302]" name="afterMethod" is-config="true" duration-ms="1229" started-at="2017-06-30T07:40:43Z" finished-at="2017-06-30T07:40:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- studentcenter_testCases.TC_003_BrightSpaceStudent_Login -->
-      <class name="studentcenter_testCases.TC_002_LoginandLogoutInvalidUser">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:studentcenter_testCases.TC_002_LoginandLogoutInvalidUser@544fe44c]" name="beforeSuite" is-config="true" duration-ms="593" started-at="2017-06-30T07:39:29Z" finished-at="2017-06-30T07:39:30Z">
+    <test name="Default test" duration-ms="23360" started-at="2017-07-04T13:37:53Z" finished-at="2017-07-04T13:38:17Z">
+      <class name="studentcenter_testCases.TC_006_HomeAddressUpdate">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:studentcenter_testCases.TC_006_HomeAddressUpdate@3c0f93f1]" name="beforeSuite" is-config="true" duration-ms="765" started-at="2017-07-04T14:37:52Z" finished-at="2017-07-04T14:37:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:studentcenter_testCases.TC_002_LoginandLogoutInvalidUser@544fe44c]" name="beforeTest" is-config="true" duration-ms="15" started-at="2017-06-30T07:39:30Z" finished-at="2017-06-30T07:39:30Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:studentcenter_testCases.TC_006_HomeAddressUpdate@3c0f93f1]" name="beforeTest" is-config="true" duration-ms="15" started-at="2017-07-04T14:37:53Z" finished-at="2017-07-04T14:37:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="setData()[pri:0, instance:studentcenter_testCases.TC_002_LoginandLogoutInvalidUser@544fe44c]" name="setData" is-config="true" duration-ms="0" started-at="2017-06-30T07:39:30Z" finished-at="2017-06-30T07:39:30Z">
+        <test-method status="PASS" signature="setData()[pri:0, instance:studentcenter_testCases.TC_006_HomeAddressUpdate@3c0f93f1]" name="setData" is-config="true" duration-ms="0" started-at="2017-07-04T14:37:53Z" finished-at="2017-07-04T14:37:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setData -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:studentcenter_testCases.TC_002_LoginandLogoutInvalidUser@544fe44c]" name="beforeMethod" is-config="true" duration-ms="16758" started-at="2017-06-30T07:39:31Z" finished-at="2017-06-30T07:39:47Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:studentcenter_testCases.TC_006_HomeAddressUpdate@3c0f93f1]" name="beforeMethod" is-config="true" duration-ms="9411" started-at="2017-07-04T14:37:55Z" finished-at="2017-07-04T14:38:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="loginAndLogoutInvalidUser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:studentcenter_testCases.TC_002_LoginandLogoutInvalidUser@544fe44c]" name="loginAndLogoutInvalidUser" duration-ms="9731" started-at="2017-06-30T07:39:47Z" data-provider="fetchData" finished-at="2017-06-30T07:39:57Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[cdtest108@mail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Password12345]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[The email or password entered is incorrect, try again or use the forgot password link below]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginAndLogoutInvalidUser -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:studentcenter_testCases.TC_002_LoginandLogoutInvalidUser@544fe44c]" name="afterMethod" is-config="true" duration-ms="1966" started-at="2017-06-30T07:39:57Z" finished-at="2017-06-30T07:39:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:studentcenter_testCases.TC_002_LoginandLogoutInvalidUser@544fe44c]" name="afterTest" is-config="true" duration-ms="0" started-at="2017-06-30T07:41:19Z" finished-at="2017-06-30T07:41:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:studentcenter_testCases.TC_002_LoginandLogoutInvalidUser@544fe44c]" name="afterSuite" is-config="true" duration-ms="549" started-at="2017-06-30T07:41:20Z" finished-at="2017-06-30T07:41:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- studentcenter_testCases.TC_002_LoginandLogoutInvalidUser -->
-      <class name="studentcenter_testCases.TC_001_LoginandLogout">
-        <test-method status="PASS" signature="setData()[pri:0, instance:studentcenter_testCases.TC_001_LoginandLogout@71318ec4]" name="setData" is-config="true" duration-ms="0" started-at="2017-06-30T07:40:44Z" finished-at="2017-06-30T07:40:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setData -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:studentcenter_testCases.TC_001_LoginandLogout@71318ec4]" name="beforeMethod" is-config="true" duration-ms="9049" started-at="2017-06-30T07:40:44Z" finished-at="2017-06-30T07:40:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="loginAndLogout(java.lang.String, java.lang.String)[pri:0, instance:studentcenter_testCases.TC_001_LoginandLogout@71318ec4]" name="loginAndLogout" duration-ms="10058" started-at="2017-06-30T07:40:53Z" data-provider="fetchData" finished-at="2017-06-30T07:41:03Z">
+        <test-method status="PASS" signature="loginAndLogout(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:studentcenter_testCases.TC_006_HomeAddressUpdate@3c0f93f1]" name="loginAndLogout" duration-ms="10369" started-at="2017-07-04T14:38:04Z" data-provider="fetchData" finished-at="2017-07-04T14:38:15Z">
           <params>
             <param index="0">
               <value>
@@ -108,26 +35,12 @@
                 <![CDATA[Password1234]]>
               </value>
             </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginAndLogout -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:studentcenter_testCases.TC_001_LoginandLogout@71318ec4]" name="afterMethod" is-config="true" duration-ms="1250" started-at="2017-06-30T07:41:03Z" finished-at="2017-06-30T07:41:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:studentcenter_testCases.TC_001_LoginandLogout@71318ec4]" name="beforeMethod" is-config="true" duration-ms="6301" started-at="2017-06-30T07:41:04Z" finished-at="2017-06-30T07:41:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="loginAndLogout(java.lang.String, java.lang.String)[pri:0, instance:studentcenter_testCases.TC_001_LoginandLogout@71318ec4]" name="loginAndLogout" duration-ms="7581" started-at="2017-06-30T07:41:11Z" data-provider="fetchData" finished-at="2017-06-30T07:41:18Z">
-          <params>
-            <param index="0">
+            <param index="2">
               <value>
-                <![CDATA[kaplantest15@gmail.com]]>
+                <![CDATA[Password1234]]>
               </value>
             </param>
-            <param index="1">
+            <param index="3">
               <value>
                 <![CDATA[Password1234]]>
               </value>
@@ -136,11 +49,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAndLogout -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:studentcenter_testCases.TC_001_LoginandLogout@71318ec4]" name="afterMethod" is-config="true" duration-ms="1179" started-at="2017-06-30T07:41:18Z" finished-at="2017-06-30T07:41:19Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:studentcenter_testCases.TC_006_HomeAddressUpdate@3c0f93f1]" name="afterMethod" is-config="true" duration-ms="1938" started-at="2017-07-04T14:38:15Z" finished-at="2017-07-04T14:38:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- studentcenter_testCases.TC_001_LoginandLogout -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:studentcenter_testCases.TC_006_HomeAddressUpdate@3c0f93f1]" name="afterTest" is-config="true" duration-ms="0" started-at="2017-07-04T14:38:17Z" finished-at="2017-07-04T14:38:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:studentcenter_testCases.TC_006_HomeAddressUpdate@3c0f93f1]" name="afterSuite" is-config="true" duration-ms="688" started-at="2017-07-04T14:38:17Z" finished-at="2017-07-04T14:38:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- studentcenter_testCases.TC_006_HomeAddressUpdate -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

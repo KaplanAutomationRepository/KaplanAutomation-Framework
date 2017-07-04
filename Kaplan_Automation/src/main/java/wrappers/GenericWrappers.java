@@ -276,15 +276,27 @@ public void closeBrowser() {
 	 */
 	public void clickByXpath(String xpathVal) {
 		try{
-			WebDriverWait wait = new WebDriverWait(driver, 10); 
+			new WebDriverWait(driver, 50).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathVal)));
+			driver.findElement(By.xpath(xpathVal)).click();
+			//System.out.println("The element with link name: "+name+" is clicked.");
+			/*WebDriverWait wait = new WebDriverWait(driver, 50); 
 			//driver.findElement(By.xpath(xpathVal)).click();
 			WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpathVal)));
-			element.click();
-			//Thread.sleep(3000);
-			
+			element.click();*/
+			//Thread.sleep(3000);		
 			reportStep("The element : "+xpathVal+" is clicked.", "PASS");
 		} catch (Exception e) {
 			reportStep("The element with xpath: "+xpathVal+" could not be clicked.", "FAIL");
+		}
+	}
+	public void clickById(String idVal) {
+		try{
+			WebDriverWait wait = new WebDriverWait(driver, 10); 
+			WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(idVal)));
+			element.click();
+			reportStep("The element : "+idVal+" is clicked.", "PASS");
+		} catch (Exception e) {
+			reportStep("The element with xpath: "+idVal+" could not be clicked.", "FAIL");
 		}
 	}
 	/**
@@ -396,6 +408,15 @@ public void closeBrowser() {
 			System.out.println("this is excep"+e.getMessage());
 			reportStep("Unknown exception occured while verifying the text", "FAIL");
 		}
+	}
+	public String getTextById(String idVal) {
+		String bReturn = "";
+		try{
+			return driver.findElementById(idVal).getText();
+		} catch (Exception e) {
+			reportStep("The element with id: "+idVal+" could not be found.", "FAIL");
+		}
+		return bReturn; 
 	}
 }	
 
