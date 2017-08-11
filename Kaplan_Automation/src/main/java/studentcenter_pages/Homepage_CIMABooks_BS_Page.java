@@ -7,6 +7,7 @@ import wrappers.KaplanSpecificWrappers;
 public class Homepage_CIMABooks_BS_Page extends KaplanSpecificWrappers {
 	
 	public Homepage_CIMABooks_BS_Page(RemoteWebDriver driver, ExtentTest test){
+		
 		this.driver = driver;
 		this.test = test;
 		if(!verifyTitle("Homepage - CIMA Books")){

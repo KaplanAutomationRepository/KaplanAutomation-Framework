@@ -11,10 +11,10 @@ public class TC_002_LoginandLogoutInvalidUser extends KaplanSpecificWrappers{
 
 	@BeforeClass
 	public void setData() {
-		testCaseName="Login and Logout with an invalid user";
+		testCaseName="TC_002_LoginandLogoutInvalidUser";
 		testDescription="Login To MyKaplan and Logout with an invalid user";
 		browserName="chrome";
-		dataSheetName="TC002_LoginandLogoutInvlaidUser";
+		dataSheetName="TC_002_LoginandLogoutInvlaidUser";
 		category="Smoke";
 		authors="DivyaLakshmi";
 	}

@@ -3,7 +3,21 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="studentcenter_testCases.TC_006_HomeAddressUpdate"/>
+      <class name="studentcenter_testCases.TC_001_LoginandLogout"/>
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="studentcenter_testCases.TC_001_LoginandLogout">
+        <methods>
+          <include name="loginAndLogout"/>
+          <include name="beforeTest"/>
+          <include name="beforeSuite"/>
+          <include name="afterTest"/>
+          <include name="afterSuite"/>
+          <include name="setData"/>
+        </methods>
+      </class> <!-- studentcenter_testCases.TC_001_LoginandLogout -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

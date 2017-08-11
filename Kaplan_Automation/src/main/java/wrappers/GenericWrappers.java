@@ -5,11 +5,12 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Platform;
@@ -20,8 +21,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
- 
+
+import com.gargoylesoftware.htmlunit.javascript.host.Element;
 import com.relevantcodes.extentreports.ExtentTest;
 
 import utils.Reporter;
@@ -54,8 +57,24 @@ public class GenericWrappers extends Reporter implements Wrappers {
 			}		
 	}
 	public GenericWrappers(RemoteWebDriver driver, ExtentTest test) {
+		
 		this.driver = driver;
 		this.test=test;
+		
+		Properties pro = new Properties();
+		
+		try {
+			ClassLoader classLoader = getClass().getClassLoader();
+			pro.load(new FileInputStream(new File(classLoader.getResource("configuration.properties").getFile())));
+			sHubUrl = pro.getProperty("HUB");
+			sHubPort = pro.getProperty("PORT");
+			sUrl=pro.getProperty("URL");
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}	
 	}
 	/*public void loadObjects()
 	{
@@ -165,7 +184,7 @@ public class GenericWrappers extends Reporter implements Wrappers {
 			}
 			else
 			{
-				System.setProperty("webdriver.chrome.driver", "./Drivers/geckodriver.exe");
+				System.setProperty("webdriver.Firefox.driver", "./Drivers/geckodriver.exe");
 				driver = new FirefoxDriver();
 			}
 }
@@ -233,10 +252,7 @@ public void closeBrowser() {
 	public void clickBylinkText(String linkValue)
 	{
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, 10); 
-			WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.linkText(linkValue)));
-			element.click();
-			//driver.findElement(By.linkText(linkValue)).click();
+			driver.findElement(By.linkText(linkValue)).click();
 			reportStep("The web element "+linkValue+" is clicked", "PASS");
 		} 
 		catch (NoSuchElementException e) 
@@ -274,10 +290,20 @@ public void closeBrowser() {
 	 * @param xpathVal  The xpath (locator) of the element to be clicked
 	 * @author Divya Suravarjula- Kaplan
 	 */
-	public void clickByXpath(String xpathVal) {
+	public void clickByXpath1(String xpathVal) {
 		try{
-			new WebDriverWait(driver, 50).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathVal)));
-			driver.findElement(By.xpath(xpathVal)).click();
+			WebElement objWebElement1=(WebElement) new Element();
+			//new WebDriverWait(driver, 50).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathVal)));
+			Boolean flag=true;
+			while(flag)
+			{
+				WebElement objWebElement2 = (WebElement) ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathVal));
+				if(objWebElement1==objWebElement2)
+				{
+					flag = false;
+					driver.findElement(By.xpath(xpathVal)).click();
+				}					
+			}
 			//System.out.println("The element with link name: "+name+" is clicked.");
 			/*WebDriverWait wait = new WebDriverWait(driver, 50); 
 			//driver.findElement(By.xpath(xpathVal)).click();
@@ -288,6 +314,24 @@ public void closeBrowser() {
 		} catch (Exception e) {
 			reportStep("The element with xpath: "+xpathVal+" could not be clicked.", "FAIL");
 		}
+	}
+	public void clickByXpath(String xpathVal) {
+		try{
+			
+			//new WebDriverWait(driver, 50).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathVal)));		
+			driver.findElement(By.xpath(xpathVal)).click();		
+			reportStep("The element : "+xpathVal+" is clicked.", "PASS");
+		} catch (Exception e) {
+			reportStep("The element with xpath: "+xpathVal+" could not be clicked.", "FAIL");
+		}
+	}
+	public void clickByXpathNoSnap(String xpathVal) {
+		try{
+			driver.findElement(By.xpath(xpathVal)).click();
+			reportStep("The element : "+xpathVal+" is clicked.", "PASS");
+		} catch (Exception e) {
+			reportStep("The element with xpath: "+xpathVal+" could not be clicked.", "FAIL");
+		}		
 	}
 	public void clickById(String idVal) {
 		try{
@@ -359,8 +403,8 @@ public void closeBrowser() {
 			WebDriverWait wait = new WebDriverWait(driver, 100);
 			String eText=driver.findElement(By.className(classValue)).getText();
 			WebElement wb=driver.findElement(By.className(classValue));
-			System.out.println(wb);
-			System.out.println("test value"+eText);
+			//System.out.println(wb);
+			//System.out.println("test value"+eText);
 			wait.until(ExpectedConditions.textToBe(By.className(classValue), text));
 			//WebDriverWait wait = new WebDriverWait(driver, 10); 
 			//WebElement element = wait.until(ExpectedConditions.textToBePresentInElement(By.className(classValue), text)));
@@ -388,7 +432,7 @@ public void closeBrowser() {
 			String eText=driver.findElement(By.xpath(xPathValue)).getText();
 			//WebElement wb=driver.findElement(By.className(xPathValue));
 			//System.out.println(wb);
-			System.out.println("test value"+eText);
+			//System.out.println("test value"+eText);
 		//	wait.until(ExpectedConditions.textToBe(By.className(xPathValue), text));
 			//WebDriverWait wait = new WebDriverWait(driver, 10); 
 			//WebElement element = wait.until(ExpectedConditions.textToBePresentInElement(By.className(classValue), text)));
@@ -418,5 +462,78 @@ public void closeBrowser() {
 		}
 		return bReturn; 
 	}
+	/**
+	 * This method will accept the alert opened
+	 * @author Divya - Kaplan
+	 */
+	public void acceptAlert() {
+		try {
+			driver.switchTo().alert().accept();
+			reportStep("The alert is accepted", "PASS");
+		} catch (NoAlertPresentException e) {
+			reportStep("The alert could not be found.", "FAIL");
+		} catch (Exception e) {
+			reportStep("The alert could not be accepted.", "FAIL");
+		}
+	}
+	/**
+	 * This method will return the text of the alert
+	 * @author Divya Suravarjula - Kaplan
+	 */
+	public String getAlertText()
+	{		
+		String text = null;
+		try
+		{
+		 text=driver.switchTo().alert().getText();
+		} 
+		catch (NoAlertPresentException e) 
+		{
+			reportStep("The alert could not be found.", "FAIL");
+		} 
+		catch (Exception e)
+		{
+			reportStep("The alert could not be accepted.", "FAIL");
+		}
+		return text;
+	}
+	
+	public void selectVisibileTextByXPath(String xpath, String value) {
+		try{
+			new Select(driver.findElement(By.xpath(xpath))).selectByVisibleText(value);;
+			reportStep("The element with xpath: "+xpath+" is selected with value :"+value, "PASS");
+		} catch (Exception e) {
+			reportStep("The value: "+value+" could not be selected.", "FAIL");
+		}
+	}
+	
+	public void getTextFromTable(String xpath,String text)
+	{
+		WebElement table =driver.findElement(By.xpath(xpath));
+		List<WebElement> rows=table.findElements(By.tagName("tr"));
+		int rowcnt=rows.size();
+		for(int i=0;i<rowcnt;i++)
+		{
+			List<WebElement> clmns=table.findElements(By.tagName("tr"));
+			int clmcnt=clmns.size();
+			for(int j=0;j<clmcnt;j++)
+			{
+				String clntext=clmns.get(j).getText();
+				if(clntext.contentEquals(text))
+				{
+					reportStep("The text " +text+ " is matching with "+clntext, "PASS");
+				}
+				else
+				{
+					reportStep("The text " +text+ " is not matching with "+clntext, "FAIL");	
+				}
+			}		
+		}		
+	}
 }	
+
+
+
+
+
 

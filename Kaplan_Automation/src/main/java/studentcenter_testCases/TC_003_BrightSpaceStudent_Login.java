@@ -9,10 +9,10 @@ import wrappers.KaplanSpecificWrappers;
 public class TC_003_BrightSpaceStudent_Login extends KaplanSpecificWrappers {
 	@BeforeClass
 	public void setData() {
-		testCaseName="TC_002_BrightSpaceStudent_Login";
+		testCaseName="TC_003_BrightSpaceStudent_Login";
 		testDescription="Login To BrightSpace and Logout";
 		browserName="chrome";
-		dataSheetName="TC003_BrightSpaceStudent_Login";
+		dataSheetName="TC_003_BrightSpaceStudent_Login";
 		category="Smoke";
 		authors="DivyaLakshmi";
 	}

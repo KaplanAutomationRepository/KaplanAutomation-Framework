@@ -61,5 +61,16 @@ public interface Wrappers {
 	
 	
 	
+	/**
+	 * This method will accept the alert opened
+	 * @author Divya - Kaplan
+	 */
+	public void acceptAlert();
+	/**
+	 * This method will return the text of the alert
+	 * @author Divya Suravarjula - Kaplan
+	 */
+	public String getAlertText();
+	
 	
 }
