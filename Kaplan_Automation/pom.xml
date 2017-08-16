@@ -4,6 +4,7 @@
     <groupId>Kaplan</groupId>
     <artifactId>Kaplan_Automation</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+
     <dependencies>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
