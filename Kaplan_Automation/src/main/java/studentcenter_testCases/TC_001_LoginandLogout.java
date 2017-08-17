@@ -1,11 +1,6 @@
 package studentcenter_testCases;
-
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import com.relevantcodes.extentreports.ExtentTest;
-
 import studentcenter_pages.Login_Page;
 import wrappers.KaplanSpecificWrappers;
 

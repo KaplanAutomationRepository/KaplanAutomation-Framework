@@ -43,8 +43,8 @@ public class MyDetails_Page extends KaplanSpecificWrappers{
 	}
 	public MyDetails_Page clickPersonalDetailsEditLink() throws InterruptedException
 	{
-		//Thread.sleep(10000);
-	    new WebDriverWait(driver, 100).until(ExpectedConditions.elementToBeClickable(By.xpath(objec.getProperty("MyDetails.PersonalDetails_Edit.Xpath"))));
+		Thread.sleep(10000);
+	   // new WebDriverWait(driver, 100).until(ExpectedConditions.elementToBeClickable(By.xpath(objec.getProperty("MyDetails.PersonalDetails_Edit.Xpath"))));
 		/*if (driver.findElement(By.xpath(objec.getProperty("MyDetails.PersonalDetails_Edit.Xpath"))).isDisplayed() && driver.findElement(By.xpath(objec.getProperty("MyDetails.PersonalDetails_Edit.Xpath"))).isEnabled())
 		{
 			clickByXpath(objec.getProperty("MyDetails.PersonalDetails_Edit.Xpath"));

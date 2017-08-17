@@ -14,5 +14,5 @@
       <class name="studentcenter_testCases.TC_010_OrderHistory"/>
       <class name="studentcenter_testCases.TC_007_HomeAddressUpdate"/>
     </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+  </test>
+</suite>
