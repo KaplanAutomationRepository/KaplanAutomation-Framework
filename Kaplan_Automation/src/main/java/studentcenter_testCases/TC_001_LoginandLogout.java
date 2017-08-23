@@ -10,10 +10,11 @@ public class TC_001_LoginandLogout extends KaplanSpecificWrappers {
 	public void setData() {
 		testCaseName = "TC_001_LoginandLogout";
 		testDescription = "Login To MyKaplan and Logout";
-		browserName = "chrome";
+		browserName = "chrome,sysURL";
 		dataSheetName = "TC_001_LoginandLogout";
 		category = "Smoke";
 		authors = "DivyaLakshmi";
+		
 	}
 
 	@Test(dataProvider = "fetchData")

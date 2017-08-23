@@ -1,6 +1,10 @@
 package wrappers;
 
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.util.Properties;
+
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -36,7 +40,30 @@ public class KaplanSpecificWrappers extends GenericWrappers{
 		test = startTestCase(testCaseName, testDescription);
 		test.assignCategory(category);
 		test.assignAuthor(authors);
-		invokeApp(browserName);
+		Properties pro= new Properties();
+		String[] arrBrowser =browserName.split(",");
+		try{
+			ClassLoader classLoader = getClass().getClassLoader();
+			pro.load(new FileInputStream(new File(classLoader.getResource("configuration.properties").getFile())));
+			
+			if(arrBrowser.length>1)
+			{
+				String UrlName = arrBrowser[1];	
+				
+				sUrl=pro.getProperty(UrlName);
+				invokeApp(browserName, sUrl);
+				//invokeApp(browserName);
+			}
+		}
+		catch(Exception ex)
+		{
+			ex.printStackTrace();
+		}
+		finally
+		{
+			pro = null;
+		}
+		
 	}
 		
 	@AfterSuite

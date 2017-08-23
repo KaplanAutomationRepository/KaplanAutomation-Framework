@@ -59,4 +59,16 @@ public class Login_Page extends KaplanSpecificWrappers
 		
 		return this;
 	}
+	//To click on addabook link
+	public Login_Page clickAddBook()
+	{
+		 clickBylinkText(objec.getProperty("Login.AddaBook.Link"));
+		 return this;
+	}
+	//To click on Register button
+		public Register_Page clickRegister()
+		{
+			 clickBylinkText(objec.getProperty("Login.Register.Link"));
+			 return new Register_Page(driver, test);
+		}
 }

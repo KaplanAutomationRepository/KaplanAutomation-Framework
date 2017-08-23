@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
+import java.util.Optional;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
@@ -48,7 +49,8 @@ public class GenericWrappers extends Reporter implements Wrappers {
 				pro.load(new FileInputStream(new File(classLoader.getResource("configuration.properties").getFile())));
 				sHubUrl = pro.getProperty("HUB");
 				sHubPort = pro.getProperty("PORT");
-				sUrl=pro.getProperty("URL");
+				//String ActiveUrl=pro.getProperty("userURl");
+				sUrl=pro.getProperty("userURl");
 				
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
@@ -119,7 +121,7 @@ public class GenericWrappers extends Reporter implements Wrappers {
 
 	public void unloadObjects()
 	{
-		pro=null;
+		//pro=null;
 		//added
 		objec=null;
 	}
@@ -131,7 +133,10 @@ public class GenericWrappers extends Reporter implements Wrappers {
 	 * @param url - The url with http or https
 	 * 
 	 */
-
+	public void invokeApp(String browser, String strUrl) {
+		sUrl = strUrl;
+		invokeApp(browser);
+	}
 	public void invokeApp(String browser) {
 		
 		invokeApp(browser,false);
@@ -162,10 +167,12 @@ public class GenericWrappers extends Reporter implements Wrappers {
 	 */
 	
 	public void invokeApp(String browser, boolean bRemote) {
-		
+		String[] arrBrowser =browser.split(","); 
+		Properties pro = new Properties();
 		try {
+			
              DesiredCapabilities dc= new DesiredCapabilities();
-			dc.setBrowserName(browser);
+			dc.setBrowserName(arrBrowser[0]);
 			dc.setPlatform(Platform.WINDOWS);
 			
 			//this is for grid run
@@ -177,7 +184,7 @@ public class GenericWrappers extends Reporter implements Wrappers {
 			//This is for local run
 			else
 {
-			if(browser.equalsIgnoreCase("chrome"))
+			if(arrBrowser[0].equalsIgnoreCase("chrome"))
 			{
 				System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver.exe");
 				driver = new ChromeDriver();
@@ -190,13 +197,20 @@ public class GenericWrappers extends Reporter implements Wrappers {
 }
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+//			if(arrBrowser.length>1)
+//			{
+//				String UrlName = arrBrowser[1];				
+//				sUrl=pro.getProperty(UrlName);
+//			}	
+			
 			driver.get(sUrl);
 			primaryWindowHandle = driver.getWindowHandle();
-			reportStep("The browser "+browser+" is launched successfully", "PASS");
+			reportStep("The browser "+arrBrowser[0]+" is launched successfully", "PASS");
 		} catch (Exception e) {
 			e.printStackTrace();
-		reportStep("The browser "+browser+" is not launched","FAIL");
+		reportStep("The browser "+arrBrowser[0]+" is not launched","FAIL");
 		}
+		
 	}
 /**
  * This method will close all browsers

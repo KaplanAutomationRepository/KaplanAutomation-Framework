@@ -18,31 +18,37 @@ public class Addresses_Page extends KaplanSpecificWrappers{
 				reportStep("This is not Addresses Page", "FAIL");
 			}
 		}
+		//To click on Edit link of Home address
 		public  Addresses_Page clickEditLinkofHome()
 		{
 			clickByXpath(objec.getProperty("Address.Homeadr.Edit.Xpath"));
 			return this;
 		}
+		//To click on Edit link of delivery address
 		public  Addresses_Page clickEditLinkofDelivery()
 		{
 			clickByXpath(objec.getProperty("Address.Deliveryadr.Edit.Xpath"));
 			return this;
 		}
+		//To enter line 1 of home address
 		public  Addresses_Page enterAddressLine1Home(String address)
 		{
 			enterDataById (objec.getProperty("Address.Homeadr.AddressLine1.Id"),address);
 			return this;
 		}
+		//To enter city of home address
 		public  Addresses_Page enterCityHome(String city)
 		{
 			enterDataById (objec.getProperty("Address.Homeadr.City.Id"),city);
 			return this;
 		}
+		//To enter pincode of home address
 		public  Addresses_Page enterPincodeHome(String pincode)
 		{
 			enterDataById (objec.getProperty("Address.Homeadr.PCode.Id"),pincode);
 			return this;
 		}
+		//To click on update details of home address
 		public  Addresses_Page clickonUpdateDetailsHome() throws InterruptedException
 		{
 			clickByXpathNoSnap (objec.getProperty("Address.Homeadr.UpdateDetails.Xpath"));
@@ -53,21 +59,25 @@ public class Addresses_Page extends KaplanSpecificWrappers{
 			acceptAlert();*/
 			return this;
 		}
+		//To enter line 1 of delivery address
 		public  Addresses_Page enterAddressLine1Delivery(String address)
 		{
 			enterDataById (objec.getProperty("Address.Deladr.AddressLine1.Id"),address);
 			return this;
 		}
+		//To enter city of delivery address
 		public  Addresses_Page enterCityDelivery(String city)
 		{
 			enterDataById (objec.getProperty("Address.Deladr.City.Id"),city);
 			return this;
 		}
+		//To enter pincode of delivery address
 		public  Addresses_Page enterPincodeDelivery(String pincode)
 		{
 			enterDataById (objec.getProperty("Address.Deladr.PCode.Id"),pincode);
 			return this;
 		}
+		//To click on update details of delivery address
 		public  Addresses_Page clickonUpdateDetailsDelivery() throws InterruptedException
 		{
 			clickByXpathNoSnap (objec.getProperty("Address.Deladr.UpdateDetails.Xpath"));

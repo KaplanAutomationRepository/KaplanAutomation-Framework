@@ -35,6 +35,3 @@ new Login_Page(driver,test)
 }
 }
 
-
-
-
