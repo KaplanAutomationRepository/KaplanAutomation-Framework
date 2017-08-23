@@ -32,5 +32,6 @@ new Login_Page(driver,test)
 .enterPassword(password)
 .enterConfirmPassword(password)
 .clickRegisterButton();
+//hi
 }
 }
