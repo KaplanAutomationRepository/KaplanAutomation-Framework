@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,8 +37,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-passed">Default suite</span>
+            <a href="#" class="navigator-link" panel-name="suite-Suite">
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,37 +48,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\dsuravarjula\AppData\Local\Temp\testng-eclipse--432536945\testng-customsuite.xml</span>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Suite">
+                    <span>C:\Users\dsuravarjula\git\KaplanAutomation-Framework\Kaplan_Automation\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="testlist-Suite">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="group-Suite">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="times-Suite">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="reporter-Suite">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Suite">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="chronological-Suite">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -91,21 +91,80 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">11 methods, 1 failed,   10 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="studentcenter_testCases.TC_005_MyDetailsUpdate_PersonalDetails" hash-for-method="myDetailsUpdate(addabook5@mail.com, Password1234, Kaplan, Sword)">myDetailsUpdate(addabook5@mail.com, Password1234, Kaplan, Sword)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
                     <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="studentcenter_testCases.TC_011_RegistrationViaAddaBook" hash-for-method="registrationviaAddaBook(kaplansword5@mail.com, kaplan, sword, 98666353534233400, Password1234)">registrationviaAddaBook(kaplansword5@mail.com, kaplan, sword, 98666353534233400, Password1234)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="studentcenter_testCases.TC_007_HomeAddressUpdate" hash-for-method="HomeAddressUpdate(newtest1@mail.com, Password1234, Broadways Road, Scotland, 524005.0)">HomeAddressUpdate(newtest1@mail.com, Password1234, Broadways Road, Scotland, 524005.0)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="studentcenter_testCases.TC_008_DeliveryAddressUpdate" hash-for-method="deliveryAddressUpdate(newtest1@mail.com, Password1234, Broadways Road, Scotland, 524005)">deliveryAddressUpdate(newtest1@mail.com, Password1234, Broadways Road, Scotland, 524005)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="studentcenter_testCases.TC_001_LoginandLogout" hash-for-method="loginAndLogout(kaplantest15@gmail.com, Password1234)">loginAndLogout(kaplantest15@gmail.com, Password1234)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="studentcenter_testCases.TC_001_LoginandLogout" hash-for-method="loginAndLogout(newtest1@mail.com, Password1234)">loginAndLogout(newtest1@mail.com, Password1234)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="studentcenter_testCases.TC_004_LoginwithInactiveUser" hash-for-method="loginAndLogoutInvalidUser(demotest98@mail.com, Password1234, Please be advised that you have not activated your account. To do...)">loginAndLogoutInvalidUser(demotest98@mail.com, Password1234, Please be advised that you have not activated your account. To do...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="studentcenter_testCases.TC_002_LoginandLogoutInvalidUser" hash-for-method="loginAndLogoutInvalidUser(cdtest108@mail.com, Password12345, The email or password entered is incorrect, try again or use the ...)">loginAndLogoutInvalidUser(cdtest108@mail.com, Password12345, The email or password entered is incorrect, try again or use the ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="studentcenter_testCases.TC_003_BrightSpaceStudent_Login" hash-for-method="loginAndLogoutOfBrightSpace(cdtest106@mail.com, Password1234)">loginAndLogoutOfBrightSpace(cdtest106@mail.com, Password1234)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="studentcenter_testCases.TC_006_MyDetailsUpdate_ContactInformation" hash-for-method="myDetailsUpdate(newregistereduser@mail.com, Password1234, Kaplan1@mail.com, 9898789867879, 98877545678, 88445435455,...)">myDetailsUpdate(newregistereduser@mail.com, Password1234, Kaplan1@mail.com, 9898789867879, 98877545678, 88445435455,...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="studentcenter_testCases.TC_010_OrderHistory" hash-for-method="orderHistory(kaplantest15@gmail.com, Password1234, 13/12/2016, KF155328, £509.00, £0.00, £509.00, 13/12/2016, ACC...)">orderHistory(kaplantest15@gmail.com, Password1234, 13/12/2016, KF155328, £509.00, £0.00, £509.00, 13/12/2016, ACC...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="studentcenter_testCases.TC_009_UpdatePassword" hash-for-method="updatePassword(kaplantest15@gmail.com, Password1234, Password1234, Password1234)">updatePassword(kaplantest15@gmail.com, Password1234, Password1234, Password1234)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,142 +175,670 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+        <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">studentcenter_testCases.TC_011_RegistrationViaAddaBook</span>
+              <img src="failed.png"/>
+              <span class="class-name">studentcenter_testCases.TC_005_MyDetailsUpdate_PersonalDetails</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="registrationviaAddaBook(kaplansword5@mail.com, kaplan, sword, 98666353534233400, Password1234)">
-                  </a> <!-- registrationviaAddaBook(kaplansword5@mail.com, kaplan, sword, 98666353534233400, Password1234) -->
-                  <span class="method-name">registrationviaAddaBook</span>
-                  <span class="parameters">(kaplansword5@mail.com, kaplan, sword, 98666353534233400, Password1234)</span>
+                  <a name="myDetailsUpdate(addabook5@mail.com, Password1234, Kaplan, Sword)">
+                  </a> <!-- myDetailsUpdate(addabook5@mail.com, Password1234, Kaplan, Sword) -->
+                  <span class="method-name">myDetailsUpdate</span>
+                  <span class="parameters">(addabook5@mail.com, Password1234, Kaplan, Sword)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//input[@type=&apos;submit&apos;])[1]&quot;}
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DEL-DEV-VM03&apos;, ip: &apos;10.73.247.203&apos;, os.name: &apos;Windows Server 2012 R2&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\DSURAV~1\AppData\Local\Temp\2\scoped_dir11288_17836}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 8d0f3d5786beac6a10a2480bc8cb1a56
+*** Element info: {Using=xpath, value=(//input[@type=&apos;submit&apos;])[1]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at studentcenter_pages.MyDetails_Page.clickOnUpdateDetails(MyDetails_Page.java:71)
+	at studentcenter_testCases.TC_005_MyDetailsUpdate_PersonalDetails.myDetailsUpdate(TC_005_MyDetailsUpdate_PersonalDetails.java:32)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
-        </div> <!-- panel Default_suite -->
-        <div panel-name="test-xml-Default_suite" class="panel">
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">studentcenter_testCases.TC_007_HomeAddressUpdate</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="HomeAddressUpdate(newtest1@mail.com, Password1234, Broadways Road, Scotland, 524005.0)">
+                  </a> <!-- HomeAddressUpdate(newtest1@mail.com, Password1234, Broadways Road, Scotland, 524005.0) -->
+                  <span class="method-name">HomeAddressUpdate</span>
+                  <span class="parameters">(newtest1@mail.com, Password1234, Broadways Road, Scotland, 524005.0)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">studentcenter_testCases.TC_008_DeliveryAddressUpdate</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="deliveryAddressUpdate(newtest1@mail.com, Password1234, Broadways Road, Scotland, 524005)">
+                  </a> <!-- deliveryAddressUpdate(newtest1@mail.com, Password1234, Broadways Road, Scotland, 524005) -->
+                  <span class="method-name">deliveryAddressUpdate</span>
+                  <span class="parameters">(newtest1@mail.com, Password1234, Broadways Road, Scotland, 524005)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">studentcenter_testCases.TC_004_LoginwithInactiveUser</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginAndLogoutInvalidUser(demotest98@mail.com, Password1234, Please be advised that you have not activated your account. To do...)">
+                  </a> <!-- loginAndLogoutInvalidUser(demotest98@mail.com, Password1234, Please be advised that you have not activated your account. To do...) -->
+                  <span class="method-name">loginAndLogoutInvalidUser</span>
+                  <span class="parameters">(demotest98@mail.com, Password1234, Please be advised that you have not activated your account. To do so, please check your email and click on the activation link contained within the email)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">studentcenter_testCases.TC_001_LoginandLogout</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginAndLogout(kaplantest15@gmail.com, Password1234)">
+                  </a> <!-- loginAndLogout(kaplantest15@gmail.com, Password1234) -->
+                  <span class="method-name">loginAndLogout</span>
+                  <span class="parameters">(kaplantest15@gmail.com, Password1234)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginAndLogout(newtest1@mail.com, Password1234)">
+                  </a> <!-- loginAndLogout(newtest1@mail.com, Password1234) -->
+                  <span class="method-name">loginAndLogout</span>
+                  <span class="parameters">(newtest1@mail.com, Password1234)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">studentcenter_testCases.TC_003_BrightSpaceStudent_Login</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginAndLogoutOfBrightSpace(cdtest106@mail.com, Password1234)">
+                  </a> <!-- loginAndLogoutOfBrightSpace(cdtest106@mail.com, Password1234) -->
+                  <span class="method-name">loginAndLogoutOfBrightSpace</span>
+                  <span class="parameters">(cdtest106@mail.com, Password1234)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">studentcenter_testCases.TC_009_UpdatePassword</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="updatePassword(kaplantest15@gmail.com, Password1234, Password1234, Password1234)">
+                  </a> <!-- updatePassword(kaplantest15@gmail.com, Password1234, Password1234, Password1234) -->
+                  <span class="method-name">updatePassword</span>
+                  <span class="parameters">(kaplantest15@gmail.com, Password1234, Password1234, Password1234)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">studentcenter_testCases.TC_010_OrderHistory</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="orderHistory(kaplantest15@gmail.com, Password1234, 13/12/2016, KF155328, £509.00, £0.00, £509.00, 13/12/2016, ACC...)">
+                  </a> <!-- orderHistory(kaplantest15@gmail.com, Password1234, 13/12/2016, KF155328, £509.00, £0.00, £509.00, 13/12/2016, ACC...) -->
+                  <span class="method-name">orderHistory</span>
+                  <span class="parameters">(kaplantest15@gmail.com, Password1234, 13/12/2016, KF155328, £509.00, £0.00, £509.00, 13/12/2016, ACCA Skills F4 CL (ENG) -Tuition course materials - KP, )</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">studentcenter_testCases.TC_002_LoginandLogoutInvalidUser</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginAndLogoutInvalidUser(cdtest108@mail.com, Password12345, The email or password entered is incorrect, try again or use the ...)">
+                  </a> <!-- loginAndLogoutInvalidUser(cdtest108@mail.com, Password12345, The email or password entered is incorrect, try again or use the ...) -->
+                  <span class="method-name">loginAndLogoutInvalidUser</span>
+                  <span class="parameters">(cdtest108@mail.com, Password12345, The email or password entered is incorrect, try again or use the forgot password link below)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">studentcenter_testCases.TC_006_MyDetailsUpdate_ContactInformation</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="myDetailsUpdate(newregistereduser@mail.com, Password1234, Kaplan1@mail.com, 9898789867879, 98877545678, 88445435455,...)">
+                  </a> <!-- myDetailsUpdate(newregistereduser@mail.com, Password1234, Kaplan1@mail.com, 9898789867879, 98877545678, 88445435455,...) -->
+                  <span class="method-name">myDetailsUpdate</span>
+                  <span class="parameters">(newregistereduser@mail.com, Password1234, Kaplan1@mail.com, 9898789867879, 98877545678, 88445435455, CFAB)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+        </div> <!-- panel Suite -->
+        <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\dsuravarjula\AppData\Local\Temp\testng-eclipse--432536945\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\dsuravarjula\git\KaplanAutomation-Framework\Kaplan_Automation\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
-  &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
+  &lt;test name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;studentcenter_testCases.TC_011_RegistrationViaAddaBook&quot;/&gt;
+      &lt;class name=&quot;studentcenter_testCases.TC_004_LoginwithInactiveUser&quot;/&gt;
+      &lt;class name=&quot;studentcenter_testCases.TC_006_MyDetailsUpdate_ContactInformation&quot;/&gt;
+      &lt;class name=&quot;studentcenter_testCases.TC_002_LoginandLogoutInvalidUser&quot;/&gt;
+      &lt;class name=&quot;studentcenter_testCases.TC_008_DeliveryAddressUpdate&quot;/&gt;
+      &lt;class name=&quot;studentcenter_testCases.TC_001_LoginandLogout&quot;/&gt;
+      &lt;class name=&quot;studentcenter_testCases.TC_003_BrightSpaceStudent_Login&quot;/&gt;
+      &lt;class name=&quot;studentcenter_testCases.TC_009_UpdatePassword&quot;/&gt;
+      &lt;class name=&quot;studentcenter_testCases.TC_005_MyDetailsUpdate_PersonalDetails&quot;/&gt;
+      &lt;class name=&quot;studentcenter_testCases.TC_010_OrderHistory&quot;/&gt;
+      &lt;class name=&quot;studentcenter_testCases.TC_007_HomeAddressUpdate&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Default test --&gt;
-&lt;/suite&gt; &lt;!-- Default suite --&gt;
+  &lt;/test&gt; &lt;!-- Test --&gt;
+&lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Default_suite" class="panel">
+        <div panel-name="testlist-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Default suite</span>
+            <span class="header-content">Tests for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (1 class)</span>
+                <span class="test-name">Test (10 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Default_suite" class="panel">
+        <div panel-name="group-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Default suite</span>
+            <span class="header-content">Groups for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Default_suite" class="panel">
+        <div panel-name="times-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Default suite</span>
+            <span class="header-content">Times for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Default_suite');
-function tableData_Default_suite() {
+suiteTableInitFunctions.push('tableData_Suite');
+function tableData_Suite() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(11);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'registrationviaAddaBook')
-data.setCell(0, 2, 'studentcenter_testCases.TC_011_RegistrationViaAddaBook')
-data.setCell(0, 3, 278928);
-window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+data.setCell(0, 1, 'myDetailsUpdate')
+data.setCell(0, 2, 'studentcenter_testCases.TC_005_MyDetailsUpdate_PersonalDetails')
+data.setCell(0, 3, 173110);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'myDetailsUpdate')
+data.setCell(1, 2, 'studentcenter_testCases.TC_006_MyDetailsUpdate_ContactInformation')
+data.setCell(1, 3, 120467);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'loginAndLogoutInvalidUser')
+data.setCell(2, 2, 'studentcenter_testCases.TC_004_LoginwithInactiveUser')
+data.setCell(2, 3, 68778);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'deliveryAddressUpdate')
+data.setCell(3, 2, 'studentcenter_testCases.TC_008_DeliveryAddressUpdate')
+data.setCell(3, 3, 50266);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'orderHistory')
+data.setCell(4, 2, 'studentcenter_testCases.TC_010_OrderHistory')
+data.setCell(4, 3, 23777);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'HomeAddressUpdate')
+data.setCell(5, 2, 'studentcenter_testCases.TC_007_HomeAddressUpdate')
+data.setCell(5, 3, 22802);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'loginAndLogoutOfBrightSpace')
+data.setCell(6, 2, 'studentcenter_testCases.TC_003_BrightSpaceStudent_Login')
+data.setCell(6, 3, 13499);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'updatePassword')
+data.setCell(7, 2, 'studentcenter_testCases.TC_009_UpdatePassword')
+data.setCell(7, 3, 9456);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'loginAndLogout')
+data.setCell(8, 2, 'studentcenter_testCases.TC_001_LoginandLogout')
+data.setCell(8, 3, 7775);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'loginAndLogout')
+data.setCell(9, 2, 'studentcenter_testCases.TC_001_LoginandLogout')
+data.setCell(9, 3, 7288);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'loginAndLogoutInvalidUser')
+data.setCell(10, 2, 'studentcenter_testCases.TC_002_LoginandLogoutInvalidUser')
+data.setCell(10, 3, 3505);
+window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 minutes</span>
-              <div id="times-div-Default_suite">
-              </div> <!-- times-div-Default_suite -->
+              <span class="suite-total-time">Total running time: 8 minutes</span>
+              <div id="times-div-Suite">
+              </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Default_suite" class="panel">
+        <div panel-name="reporter-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Default suite</span>
+            <span class="header-content">Reporter output for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Default_suite" class="panel">
+        <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">36 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">studentcenter_testCases.TC_007_HomeAddressUpdate</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeTest</span>
+                <br/>
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+                <span class="ignored-method-name">afterTest</span>
+                <br/>
+                <span class="ignored-method-name">afterSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">studentcenter_testCases.TC_005_MyDetailsUpdate_PersonalDetails</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeTest</span>
+                <br/>
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+                <span class="ignored-method-name">afterTest</span>
+                <br/>
+                <span class="ignored-method-name">afterSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">studentcenter_testCases.TC_008_DeliveryAddressUpdate</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeTest</span>
+                <br/>
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+                <span class="ignored-method-name">afterTest</span>
+                <br/>
+                <span class="ignored-method-name">afterSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">studentcenter_testCases.TC_001_LoginandLogout</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeTest</span>
+                <br/>
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+                <span class="ignored-method-name">afterTest</span>
+                <br/>
+                <span class="ignored-method-name">afterSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">studentcenter_testCases.TC_003_BrightSpaceStudent_Login</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeTest</span>
+                <br/>
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+                <span class="ignored-method-name">afterTest</span>
+                <br/>
+                <span class="ignored-method-name">afterSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">studentcenter_testCases.TC_009_UpdatePassword</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeTest</span>
+                <br/>
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+                <span class="ignored-method-name">afterTest</span>
+                <br/>
+                <span class="ignored-method-name">afterSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">studentcenter_testCases.TC_010_OrderHistory</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeTest</span>
+                <br/>
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+                <span class="ignored-method-name">afterTest</span>
+                <br/>
+                <span class="ignored-method-name">afterSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">studentcenter_testCases.TC_002_LoginandLogoutInvalidUser</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeTest</span>
+                <br/>
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+                <span class="ignored-method-name">afterTest</span>
+                <br/>
+                <span class="ignored-method-name">afterSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">studentcenter_testCases.TC_006_MyDetailsUpdate_ContactInformation</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeTest</span>
+                <br/>
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+                <span class="ignored-method-name">afterTest</span>
+                <br/>
+                <span class="ignored-method-name">afterSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Default_suite" class="panel">
+        <div panel-name="chronological-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">studentcenter_testCases.TC_011_RegistrationViaAddaBook</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">studentcenter_testCases.TC_004_LoginwithInactiveUser</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">beforeSuite</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">477 ms</span>
+                <span class="method-start">379 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">setData</span>
-                <span class="method-start">488 ms</span>
+                <span class="method-start">387 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">1457 ms</span>
+                <span class="method-start">1180 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">registrationviaAddaBook(kaplansword5@mail.com, kaplan, sword, 98666353534233400, Password1234)</span>
-                <span class="method-start">9410 ms</span>
+                <span class="method-name">loginAndLogoutInvalidUser(demotest98@mail.com, Password1234, Please be advised that you have not activated your account. To do...)</span>
+                <span class="method-start">8928 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">288341 ms</span>
+                <span class="method-start">77708 ms</span>
               </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">studentcenter_testCases.TC_006_MyDetailsUpdate_ContactInformation</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setData</span>
+                <span class="method-start">78560 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">78620 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">myDetailsUpdate(newregistereduser@mail.com, Password1234, Kaplan1@mail.com, 9898789867879, 98877545678, 88445435455,...)</span>
+                <span class="method-start">91584 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">212052 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">studentcenter_testCases.TC_002_LoginandLogoutInvalidUser</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setData</span>
+                <span class="method-start">212756 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">212795 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginAndLogoutInvalidUser(cdtest108@mail.com, Password12345, The email or password entered is incorrect, try again or use the ...)</span>
+                <span class="method-start">219023 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">222529 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">studentcenter_testCases.TC_008_DeliveryAddressUpdate</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setData</span>
+                <span class="method-start">223178 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">223213 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">deliveryAddressUpdate(newtest1@mail.com, Password1234, Broadways Road, Scotland, 524005)</span>
+                <span class="method-start">229939 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">280206 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">studentcenter_testCases.TC_001_LoginandLogout</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setData</span>
+                <span class="method-start">280915 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">280945 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginAndLogout(newtest1@mail.com, Password1234)</span>
+                <span class="method-start">287392 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">295168 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">295832 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginAndLogout(kaplantest15@gmail.com, Password1234)</span>
+                <span class="method-start">302223 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">309512 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">studentcenter_testCases.TC_003_BrightSpaceStudent_Login</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setData</span>
+                <span class="method-start">310178 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">310201 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginAndLogoutOfBrightSpace(cdtest106@mail.com, Password1234)</span>
+                <span class="method-start">316751 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">330251 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">studentcenter_testCases.TC_009_UpdatePassword</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setData</span>
+                <span class="method-start">330913 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">330939 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">updatePassword(kaplantest15@gmail.com, Password1234, Password1234, Password1234)</span>
+                <span class="method-start">337371 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">346829 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">studentcenter_testCases.TC_005_MyDetailsUpdate_PersonalDetails</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setData</span>
+                <span class="method-start">347480 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">347505 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">myDetailsUpdate(addabook5@mail.com, Password1234, Kaplan, Sword)</span>
+                <span class="method-start">353740 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">526856 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">studentcenter_testCases.TC_010_OrderHistory</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setData</span>
+                <span class="method-start">527565 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">527594 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">orderHistory(kaplantest15@gmail.com, Password1234, 13/12/2016, KF155328, £509.00, £0.00, £509.00, 13/12/2016, ACC...)</span>
+                <span class="method-start">533491 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">557269 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">studentcenter_testCases.TC_007_HomeAddressUpdate</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setData</span>
+                <span class="method-start">557963 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">557987 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">HomeAddressUpdate(newtest1@mail.com, Password1234, Broadways Road, Scotland, 524005.0)</span>
+                <span class="method-start">564605 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">587409 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">studentcenter_testCases.TC_004_LoginwithInactiveUser</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">289938 ms</span>
+                <span class="method-start">588063 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">289970 ms</span>
+                <span class="method-start">588088 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

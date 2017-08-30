@@ -11,7 +11,7 @@ public class TC_008_DeliveryAddressUpdate extends KaplanSpecificWrappers{
 	public void setData() {
 		testCaseName="TC_008_DeliveryAddressUpdate";
 		testDescription="DeliveryAdddress Update";
-		browserName="chrome";
+		browserName="chrome,stgURL";
 		dataSheetName="TC_008_DeliveryAddressUpdate";
 		category="Smoke";
 		authors="DivyaLakshmi";

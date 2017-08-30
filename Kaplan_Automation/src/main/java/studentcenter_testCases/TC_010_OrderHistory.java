@@ -11,7 +11,7 @@ public class TC_010_OrderHistory extends KaplanSpecificWrappers{
 	public void setData() {
 		testCaseName="TC_010_OrderHistory";
 		testDescription="Validate Order HIstory";
-		browserName="chrome";
+		browserName="chrome,stgURL";
 		dataSheetName="TC_010_OrderHistory";
 		category="Smoke";
 		authors="DivyaLakshmi";

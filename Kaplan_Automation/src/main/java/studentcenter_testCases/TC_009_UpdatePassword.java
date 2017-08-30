@@ -11,7 +11,7 @@ public class TC_009_UpdatePassword extends KaplanSpecificWrappers{
 	public void setData() {
 		testCaseName="TC_009_UpdatePassword";
 		testDescription="Password Update";
-		browserName="chrome";
+		browserName="chrome,stgURL";
 		dataSheetName="TC_009_UpdatePassword";
 		category="Smoke";
 		authors="DivyaLakshmi";

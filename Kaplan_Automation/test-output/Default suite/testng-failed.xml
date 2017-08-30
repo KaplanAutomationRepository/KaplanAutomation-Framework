@@ -3,7 +3,23 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="studentcenter_testCases.TC_011_RegistrationViaAddaBook"/>
+      <class name="studentcenter_testCases.TC_002_LoginandLogoutInvalidUser"/>
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="studentcenter_testCases.TC_002_LoginandLogoutInvalidUser">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeSuite"/>
+          <include name="afterTest"/>
+          <include name="afterSuite"/>
+          <include name="setData"/>
+          <include name="loginAndLogoutInvalidUser" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- studentcenter_testCases.TC_002_LoginandLogoutInvalidUser -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

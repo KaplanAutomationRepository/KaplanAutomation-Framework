@@ -1,9 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test verbose="2" name="Default test">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test">
     <classes>
-      <class name="studentcenter_testCases.TC_011_RegistrationViaAddaBook"/>
+      <class name="studentcenter_testCases.TC_004_LoginwithInactiveUser"/>
+      <class name="studentcenter_testCases.TC_006_MyDetailsUpdate_ContactInformation"/>
+      <class name="studentcenter_testCases.TC_002_LoginandLogoutInvalidUser"/>
+      <class name="studentcenter_testCases.TC_008_DeliveryAddressUpdate"/>
+      <class name="studentcenter_testCases.TC_001_LoginandLogout"/>
+      <class name="studentcenter_testCases.TC_003_BrightSpaceStudent_Login"/>
+      <class name="studentcenter_testCases.TC_009_UpdatePassword"/>
+      <class name="studentcenter_testCases.TC_005_MyDetailsUpdate_PersonalDetails"/>
+      <class name="studentcenter_testCases.TC_010_OrderHistory"/>
+      <class name="studentcenter_testCases.TC_007_HomeAddressUpdate"/>
     </classes>
-  </test> <!-- Default test -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test -->
+  <test name="Test(failed)">
+    <classes>
+      <class name="studentcenter_testCases.TC_007_HomeAddressUpdate">
+        <methods>
+          <include name="setData"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- studentcenter_testCases.TC_007_HomeAddressUpdate -->
+      <class name="studentcenter_testCases.TC_005_MyDetailsUpdate_PersonalDetails">
+        <methods>
+          <include name="myDetailsUpdate" invocation-numbers="0"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="setData"/>
+        </methods>
+      </class> <!-- studentcenter_testCases.TC_005_MyDetailsUpdate_PersonalDetails -->
+      <class name="studentcenter_testCases.TC_008_DeliveryAddressUpdate">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="setData"/>
+        </methods>
+      </class> <!-- studentcenter_testCases.TC_008_DeliveryAddressUpdate -->
+      <class name="studentcenter_testCases.TC_004_LoginwithInactiveUser">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="setData"/>
+          <include name="beforeSuite"/>
+          <include name="afterTest"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- studentcenter_testCases.TC_004_LoginwithInactiveUser -->
+      <class name="studentcenter_testCases.TC_001_LoginandLogout">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="setData"/>
+        </methods>
+      </class> <!-- studentcenter_testCases.TC_001_LoginandLogout -->
+      <class name="studentcenter_testCases.TC_003_BrightSpaceStudent_Login">
+        <methods>
+          <include name="setData"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- studentcenter_testCases.TC_003_BrightSpaceStudent_Login -->
+      <class name="studentcenter_testCases.TC_009_UpdatePassword">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="setData"/>
+        </methods>
+      </class> <!-- studentcenter_testCases.TC_009_UpdatePassword -->
+      <class name="studentcenter_testCases.TC_010_OrderHistory">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="setData"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- studentcenter_testCases.TC_010_OrderHistory -->
+      <class name="studentcenter_testCases.TC_006_MyDetailsUpdate_ContactInformation">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="setData"/>
+        </methods>
+      </class> <!-- studentcenter_testCases.TC_006_MyDetailsUpdate_ContactInformation -->
+      <class name="studentcenter_testCases.TC_002_LoginandLogoutInvalidUser">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="setData"/>
+        </methods>
+      </class> <!-- studentcenter_testCases.TC_002_LoginandLogoutInvalidUser -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

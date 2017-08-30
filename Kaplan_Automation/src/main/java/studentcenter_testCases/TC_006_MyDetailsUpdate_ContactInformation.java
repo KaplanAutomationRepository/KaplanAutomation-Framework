@@ -13,7 +13,7 @@ public class TC_006_MyDetailsUpdate_ContactInformation extends KaplanSpecificWra
 	public void setData() {
 		testCaseName="TC_006_MyDetailsUpdate_ContactInformation";
 		testDescription="Verifying whether the user is able to update contact details";
-		browserName="chrome";
+		browserName="chrome,stgURL";
 		dataSheetName="TC_006_ContactDetailsUpdate";
 		category="Smoke";
 		authors="DivyaLakshmi";

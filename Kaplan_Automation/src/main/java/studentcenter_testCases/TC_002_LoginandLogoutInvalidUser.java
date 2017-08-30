@@ -13,7 +13,7 @@ public class TC_002_LoginandLogoutInvalidUser extends KaplanSpecificWrappers{
 	public void setData() {
 		testCaseName="TC_002_LoginandLogoutInvalidUser";
 		testDescription="Login To MyKaplan and Logout with an invalid user";
-		browserName="chrome";
+		browserName="chrome,stgURL";
 		dataSheetName="TC_002_LoginandLogoutInvlaidUser";
 		category="Smoke";
 		authors="DivyaLakshmi";

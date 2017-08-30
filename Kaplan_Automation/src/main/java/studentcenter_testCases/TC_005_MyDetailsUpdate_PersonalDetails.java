@@ -13,7 +13,7 @@ public class TC_005_MyDetailsUpdate_PersonalDetails extends KaplanSpecificWrappe
 	public void setData() {
 		testCaseName="TC_005_MyDetailsUpdate_PersonalDetails";
 		testDescription="Verifying whether the user is able to update personal details";
-		browserName="chrome";
+		browserName="chrome,stgURL";
 		dataSheetName="TC_005_MyDetailsUpdate";
 		category="Smoke";
 		authors="DivyaLakshmi";

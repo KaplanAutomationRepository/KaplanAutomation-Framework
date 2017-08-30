@@ -11,7 +11,7 @@ public class TC_007_HomeAddressUpdate extends KaplanSpecificWrappers{
 	public void setData() {
 		testCaseName="TC_007_HomeAddressUpdate";
 		testDescription="HomeAdddress Update";
-		browserName="chrome";
+		browserName="chrome,stgURL";
 		dataSheetName="TC_007_HomeAddressUpdate";
 		category="Smoke";
 		authors="DivyaLakshmi";

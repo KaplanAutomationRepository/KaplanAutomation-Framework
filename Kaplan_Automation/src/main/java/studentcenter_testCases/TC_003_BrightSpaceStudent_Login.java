@@ -11,7 +11,7 @@ public class TC_003_BrightSpaceStudent_Login extends KaplanSpecificWrappers {
 	public void setData() {
 		testCaseName="TC_003_BrightSpaceStudent_Login";
 		testDescription="Login To BrightSpace and Logout";
-		browserName="chrome";
+		browserName="chrome,stgURL";
 		dataSheetName="TC_003_BrightSpaceStudent_Login";
 		category="Smoke";
 		authors="DivyaLakshmi";
